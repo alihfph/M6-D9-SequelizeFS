@@ -13,9 +13,9 @@ const sequelize = new Sequelize(
 
 const models = {
   article: article(sequelize, DataTypes),
-  review: review(sequelize, DataTypes),
-  category: category(sequelize, DataTypes),
   author: author(sequelize, DataTypes),
+  category: category(sequelize, DataTypes),
+  review: review(sequelize, DataTypes),
   sequelize: sequelize,
 };
 
@@ -40,6 +40,6 @@ Object.keys(models).forEach((modelName) => {
 sequelize
   .authenticate()
   .then(() => console.log("Connection established"))
-  .catch((e) => console.log("Connection failed ",  e));
+  .catch((e) => console.log("Connection failed ", e));
 
 module.exports = models;

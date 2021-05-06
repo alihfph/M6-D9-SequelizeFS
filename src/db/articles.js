@@ -1,5 +1,3 @@
-const { author } = require(".");
-
 module.exports = (sequelize, DataTypes) => {
   const article = sequelize.define(
     "article",
@@ -24,8 +22,8 @@ module.exports = (sequelize, DataTypes) => {
   );
   article.associate = (models) => {
     article.hasMany(models.review);
-    article.belongsTo(models.author);
     article.belongsTo(models.category);
+    article.belongsTo(models.author);
   };
   return article;
 };

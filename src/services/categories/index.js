@@ -21,15 +21,15 @@ router
       console.log(e);
     }
   });
-router.route("/:studentId/classes/:classId").post(async (req, res, next) => {
-  try {
-    const student = await Student.findByPk(req.params.studentId);
-    const result = await student.addClass(req.params.classId);
-    res.send(result);
-  } catch (error) {
-    console.log(error);
-  }
-});
+// router.route("/:studentId/:classId").post(async (req, res, next) => {
+//   try {
+//     const student = await Student.findByPk(req.params.studentId);
+//     const result = await student.addClass(req.params.classId);
+//     res.send(result);
+//   } catch (error) {
+//     console.log(error);
+//   }
+// });
 router
   .route("/:id")
   .get(async (req, res, next) => {
