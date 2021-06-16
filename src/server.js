@@ -6,7 +6,7 @@ const app = express();
 
 app.use(cors());
 app.use(express.json());
-app.use("/apis", services);
+app.use("/home", services);
 const port = process.env.PORT || 3000;
 
 db.sequelize.sync().then(() => {
