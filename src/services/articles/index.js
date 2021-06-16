@@ -14,6 +14,7 @@ router.route("/").get(async (req, res, next) => {
       // { include: Student }
       // { include: category }
       ();
+      console.log(data,"Here is errorrrrrr")
     res.send(data);
   } catch (e) {
     console.log(e);
